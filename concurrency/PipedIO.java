@@ -52,6 +52,6 @@ public class PipedIO {
     exec.shutdownNow();
   }
 } /* Output: (65% match)
-Read: generics.initialization.A, Read: generics.typeinfo.B, Read: generics.C, Read: generics.D, Read: E, Read: generics.F, Read: G, Read: H, Read: I, Read: J, Read: K, Read: L, Read: M, java.lang.InterruptedException: sleep interrupted Sender sleep interrupted
+Read: A, Read: B, Read:C, Read: D, Read: E, Read: F, Read: G, Read: H, Read: I, Read: J, Read: K, Read: L, Read: M, java.lang.InterruptedException: sleep interrupted Sender sleep interrupted
 java.io.InterruptedIOException Receiver read exception
 *///:~

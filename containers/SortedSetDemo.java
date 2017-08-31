@@ -16,9 +16,12 @@ public class SortedSetDemo {
     print(high);
     Iterator<String> it = sortedSet.iterator();
     for(int i = 0; i <= 6; i++) {
-      if(i == 3) low = it.next();
-      if(i == 6) high = it.next();
-      else it.next();
+      if(i == 3)
+        low = it.next();
+      if(i == 6)
+        high = it.next();
+      else
+        it.next();
     }
     print(low);
     print(high);
