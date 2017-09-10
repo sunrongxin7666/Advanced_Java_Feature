@@ -8,6 +8,7 @@ public class SpringDetector {
   // Uses a Groundhog or class derived from Groundhog:
   public static <T extends Groundhog>
   void detectSpring(Class<T> type) throws Exception {
+    //利用反射机制，获得type类的构造器
     Constructor<T> ghog = type.getConstructor(int.class);
     Map<Groundhog,Prediction> map =
       new HashMap<Groundhog,Prediction>();
@@ -16,6 +17,7 @@ public class SpringDetector {
     print("map = " + map);
     Groundhog gh = ghog.newInstance(3);
     print("Looking up prediction for " + gh);
+    //没有重载合适的HashCode();
     if(map.containsKey(gh))
       print(map.get(gh));
     else
