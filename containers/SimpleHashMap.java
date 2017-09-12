@@ -10,6 +10,7 @@ public class SimpleHashMap<K,V> extends AbstractMap<K,V> {
   // You can't have a physical array of generics,
   // but you can upcast to one:
   @SuppressWarnings("unchecked")
+  private
   LinkedList<MapEntry<K,V>>[] buckets =
     new LinkedList[SIZE];
   public V put(K key, V value) {
@@ -46,8 +47,7 @@ public class SimpleHashMap<K,V> extends AbstractMap<K,V> {
     Set<Map.Entry<K,V>> set= new HashSet<Map.Entry<K,V>>();
     for(LinkedList<MapEntry<K,V>> bucket : buckets) {
       if(bucket == null) continue;
-      for(MapEntry<K,V> mpair : bucket)
-        set.add(mpair);
+      set.addAll(bucket);
     }
     return set;
   }

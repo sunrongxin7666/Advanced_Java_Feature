@@ -7,4 +7,15 @@ public class Groundhog {
   public String toString() {
     return "Groundhog #" + number;
   }
+
+//  @Override
+//  public int hashCode() {
+//    return number;
+//  }
+
+  @Override
+  public boolean equals(Object o) {
+    return o instanceof Groundhog
+            && ((Groundhog) o).number==this.number;
+  }
 } ///:~
