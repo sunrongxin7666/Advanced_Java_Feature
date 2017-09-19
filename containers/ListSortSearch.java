@@ -9,6 +9,7 @@ public class ListSortSearch {
       new ArrayList<String>(Utilities.list);
     list.addAll(Utilities.list);
     print(list);
+    //打乱顺序；
     Collections.shuffle(list, new Random(47));
     print("Shuffled: " + list);
     // Use a ListIterator to trim off the last elements:
@@ -21,6 +22,7 @@ public class ListSortSearch {
     Collections.sort(list);
     print("Sorted: " + list);
     String key = list.get(7);
+    //搜索之前必须排序；
     int index = Collections.binarySearch(list, key);
     print("Location of " + key + " is " + index +
       ", list.get(" + index + ") = " + list.get(index));

@@ -30,8 +30,7 @@ public class References {
     LinkedList<SoftReference<VeryBig>> sa =
       new LinkedList<SoftReference<VeryBig>>();
     for(int i = 0; i < size; i++) {
-      sa.add(new SoftReference<VeryBig>(
-        new VeryBig("Soft " + i), rq));
+      sa.add(new SoftReference<VeryBig>(new VeryBig("Soft " + i), rq));
       System.out.println("Just created: " + sa.getLast());
       checkQueue();
     }
