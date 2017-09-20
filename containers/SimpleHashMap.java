@@ -31,6 +31,7 @@ public class SimpleHashMap<K,V> extends AbstractMap<K,V> {
         break;
       }
     }
+
     if(!found)
       buckets[index].add(pair);
     return oldValue;

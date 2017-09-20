@@ -23,6 +23,7 @@ public class CountedString {
     return "String: " + s + " id: " + id +
       " hashCode(): " + hashCode();
   }
+
   public int hashCode() {
     // The very simple approach:
     // return s.hashCode() * id;
